@@ -17,6 +17,7 @@ import { MatCardModule} from '@angular/material/card';
 import { CategoryReadComponent } from './components/views/category/category-read/category-read.component';
 import { MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from "@angular/common/http";
+import { MatButtonModule } from "@angular/material/button";
 
 
 
@@ -33,7 +34,8 @@ import { HttpClientModule } from "@angular/common/http";
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

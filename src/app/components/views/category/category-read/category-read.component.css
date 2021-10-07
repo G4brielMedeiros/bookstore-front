@@ -9,11 +9,33 @@
 }
 
 .title h1 {
-    font-size: 2rem;
-    color: rgb(180, 180, 180);
-    font-weight:500;
+  font-size: 2rem;
+  color: rgb(180, 180, 180);
+  font-weight: 500;
+}
+
+button {
+  margin-bottom: 1rem;
 }
 
 .table {
-    width: 100%;
+  width: 100%;
+}
+
+.edit {
+  color: rgb(254, 177, 68);
+}
+
+.delete {
+  color: rgb(255, 102, 99);
+  margin-left: 0.5rem;
+}
+
+.actions-header {
+  width: 5rem;
+}
+
+.books {
+  margin-left: 0.5rem;
+  color: rgb(158, 193, 207);
 }
