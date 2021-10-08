@@ -5,3 +5,8 @@
     font-size: 0.9rem;
     height: 4%;
 }
+
+.github {
+    color:cyan;
+    text-decoration: none;
+}
