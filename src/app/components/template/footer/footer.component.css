@@ -7,6 +7,8 @@
 }
 
 .github {
-    color:cyan;
+    color: gray;
     text-decoration: none;
+    
+    font-family: 'Courier New', Courier, monospace;
 }

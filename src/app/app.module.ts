@@ -23,13 +23,14 @@ import { FormsModule } from "@angular/forms";
 import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CategoryDeleteComponent } from './components/views/category/category-delete/category-delete.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoryReadComponent, CategoryCreateComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, CategoryReadComponent, CategoryCreateComponent, CategoryDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
