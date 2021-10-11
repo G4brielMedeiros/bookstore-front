@@ -3,19 +3,19 @@
 
     <mat-form-field class="form">
         <mat-label>Name</mat-label>
-        <input matInput type="text" name="name" placeholder="Adventure">
+        <input matInput [(ngModel)]="category.name" type="text" name="name" placeholder="Adventure">
 
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Description</mat-label>
-        <textarea matInput type="text" name="description" placeholder="Adventurous Books"></textarea>
+        <textarea matInput [(ngModel)]="category.description" type="text" name="description" placeholder="Adventurous Books"></textarea>
 
     </mat-form-field>
 
     <div class="buttons">
-        <button class="mat-elevation-z8" mat-stroked-button color="accent">Create</button>
-        <button class="mat-elevation-z8" mat-stroked-button color="warn">Cancel</button>
+        <button (click)="create()" class="mat-elevation-z8" mat-stroked-button color="accent">CREATE</button>
+        <button class="mat-elevation-z8" mat-stroked-button color="warn">CANCEL</button>
 
     </div>
 </form>
