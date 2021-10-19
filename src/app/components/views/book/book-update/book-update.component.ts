@@ -5,11 +5,11 @@ import { Book } from '../book.model';
 import { BookService } from '../book.service';
 
 @Component({
-  selector: 'app-book-create',
-  templateUrl: './book-create.component.html',
-  styleUrls: ['./book-create.component.css']
+  selector: 'app-book-update',
+  templateUrl: './book-update.component.html',
+  styleUrls: ['./book-update.component.css']
 })
-export class BookCreateComponent implements OnInit {
+export class BookUpdateComponent implements OnInit {
 
   id_cat: String = ''
 
@@ -28,21 +28,30 @@ export class BookCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.id_cat = this.route.snapshot.paramMap.get('id_cat')!
+    this.book.id = this.route.snapshot.paramMap.get('id')!
+    this.findById();
   }
 
-  create(): void {
-    this.service.create(this.book, this.id_cat).subscribe(response => {
-      this.router.navigate([`categories/${this.id_cat}/books`])
-      this.service.messsage('Book sucessfully created.')
-    }, err => {
-      this.router.navigate([`categories/${this.id_cat}/books`])
-      this.service.messsage('Error trying to create new book. Please try again later.')
 
-    })
-  }
 
   cancel(): void {
     this.router.navigate([`categories/${this.id_cat}/books`]);
+  }
+
+  findById(): void {
+    this.service.findbyId(this.book.id!).subscribe((response) => {
+      this.book = response
+    })
+  }
+
+  update(): void {
+    this.service.update(this.book).subscribe((response) => {
+      this.router.navigate([`categories/${this.id_cat}/books`]);
+      this.service.messsage("Book successfuly updated.")
+    }, err => {
+      this.router.navigate([`categories/${this.id_cat}/books`]);
+      this.service.messsage('Failed to update book. Please try again later.')
+    })
   }
 
   getMessageTitle() {
@@ -75,5 +84,6 @@ export class BookCreateComponent implements OnInit {
     return true;
     
   }
+
 
 }
