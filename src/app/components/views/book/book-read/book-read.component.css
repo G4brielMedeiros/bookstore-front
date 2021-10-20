@@ -1,0 +1,18 @@
+form {
+    width: 70%;
+    margin: auto
+}
+
+
+.home {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.text {
+    font-size:large
+}
+
+button {
+    width: 90%;
+}
